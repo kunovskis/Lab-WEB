@@ -1,0 +1,6 @@
+<ul class="list-group">
+  <li class="list-group-item" [routerLink]="['/detail', team.position]" [class.active]="team === selectedTeam" *ngFor="let team of teams" (click)="onSelect(team)">
+    <span>{{team.position}} {{team.name}}</span>
+  </li>
+</ul>
+<button [routerLink]="['/new']">Add Team</button>

@@ -1,0 +1,28 @@
+<form [formGroup]="form" *ngIf="team !== undefined">
+  <div>
+    <label>Name:</label>
+    <div>
+      <input formControlName="name"/>
+    </div>
+  </div>
+  <div>
+    <label>Position:</label>
+    <div>
+      <input formControlName="position"/>
+    </div>
+  </div>
+  <div>
+    <label>City:</label>
+    <div>
+      <input formControlName="city"/>
+    </div>
+  </div>
+  <div>
+    <label>Stadium:</label>
+    <div>
+      <input formControlName="stadium"/>
+    </div>
+  </div>
+  <button [disabled]="!form.valid" (click)="saveTeam()">Save Changes</button>
+  <button (click)="goBack()">Go Back</button>
+</form>

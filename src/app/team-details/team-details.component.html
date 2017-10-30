@@ -1,0 +1,10 @@
+<div *ngIf="team">
+<h2>{{team.name}} details!</h2>
+  <span>
+    City: {{team.city}} <br>
+    Position: {{team.position}} <br>
+    Stadium: {{team.stadium}} <br><br>
+  </span>
+  <button [routerLink]="['/edit', team.position]">Edit Details</button>
+  <button (click)="goBack()">Back</button>
+</div>
